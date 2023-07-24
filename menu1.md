@@ -2,85 +2,68 @@
 title = "Research"
 hascode = true
 date = Date(2019, 3, 22)
-rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
+rss = "Stefan Wojcik's Research page."
 
 tags = ["syntax", "code"]
 +++
 
+# Research!
 
-# Working with code blocks
+![a descriptive caption](/images/nebula.png)
 
-\toc
+Please check out my [Github](https://github.com/stefanjwojcik) for apps and code that I'm working on,
+and follow me on [Twitter](https://www.twitter.com) at @stefanjwojcik.
 
-## Live evaluation of code blocks
-
-If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.
-
-Indeed, what happens is that the code block gets saved as a script which then gets executed.
-This also allows for that block to not be re-executed every time you change something _else_ on the page.
-
-Here's a simple example (change values in `a` to see the results being live updated):
-
-```julia:./exdot.jl
-using LinearAlgebra
-a = [1, 2, 3, 3, 4, 5, 2, 2]
-@show dot(a, a)
-println(dot(a, a))
-```
-
-You can now show what this would look like:
-
-\output{./exdot.jl}
-
-**Notes**:
-* you don't have to specify the `.jl` (see below),
-* you do need to explicitly use print statements or `@show` for things to show, so just leaving a variable at the end like you would in the REPL will show nothing,
-* only Julia code blocks are supported at the moment, there may be a support for scripting languages like `R` or `python` in the future,
-* the way you specify the path is important; see [the docs](https://tlienart.github.io/franklindocs/code/index.html#more_on_paths) for more info. If you don't care about how things are structured in your `/assets/` folder, just use `./scriptname.jl`. If you want things to be grouped, use `./group/scriptname.jl`. For more involved uses, see the docs.
-
-Lastly, it's important to realise that if you don't change the content of the code, then that code will only be executed _once_ even if you make multiple changes to the text around it.
-
-Here's another example,
-
-```julia:./code/ex2
-for i ∈ 1:5, j ∈ 1:5
-    print(" ", rpad("*"^i,5), lpad("*"^(6-i),5), j==5 ? "\n" : " "^4)
-end
-```
-
-which gives the (utterly useless):
-
-\output{./code/ex2}
-
-note the absence of `.jl`, it's inferred.
-
-You can also hide lines (that will be executed nonetheless):
-
-```julia:./code/ex3
-using Random
-Random.seed!(1) # hide
-@show randn(2)
-```
-
-\output{./code/ex3}
+My research applies data science tools and methods to social science research questions.
+My work involves using digital trace or social media data to understand the flow of information online,
+public opinion and behavior. I received my Ph.D. in political science from the University of Colorado,
+ where I conducted research on legislative networks in Brazil. In my postdoctoral research at Northeastern
+ and Harvard universities, my work focused on forecasting global presidential elections and tracing public
+ opinion with social media data. My work appears in academic journals such as Science, Political
+ Science Research and Methods, Political Research Quarterly and Legislative Studies Quarterly.
 
 
-## Including scripts
+### Pew Research Articles
 
-Another approach is to include the content of a script that has already been executed.
-This can be an alternative to the description above if you'd like to only run the code once because it's particularly slow or because it's not Julia code.
-For this you can use the `\input` command specifying which language it should be tagged as:
+I worked for 2.5 years at Pew Research Center. PRC is a great organization and I received
+excellent training and mentorship there. They have a commitment to honest and high-quality
+research.
 
+You can see a complete list of projects I worked on at PRC [here](https://www.pewresearch.org/staff/stefan-wojcik/).
 
-\input{julia}{/_assets/scripts/script1.jl} <!--_-->
+0. [Machine Learning and Gender](https://www.pewresearch.org/internet/2019/09/05/the-challenges-of-using-machine-learning-to-identify-gender-in-images/)
 
+0. [10 Facts about Americans and Twitter](https://www.pewresearch.org/fact-tank/2019/08/02/10-facts-about-americans-and-twitter/)
 
-these scripts can be run in such a way that their output is also saved to file, see `scripts/generate_results.jl` for instance, and you can then also input the results:
+0. [About 1 in 5 Adults on Twitter Follow Trump](https://www.pewresearch.org/fact-tank/2019/07/15/about-one-in-five-adult-twitter-users-in-the-u-s-follow-trump/)
 
-\output{/_assets/scripts/script1.jl} <!--_-->
+0. [Sizing up Twitter Users](https://www.pewresearch.org/internet/2019/04/24/sizing-up-twitter-users/)
 
-which is convenient if you're presenting code.
+0. [Gender and Jobs in Online Searches](https://www.pewsocialtrends.org/2018/12/17/gender-and-jobs-in-online-image-searches/)
 
-**Note**: paths specification matters, see [the docs](https://tlienart.github.io/franklindocs/code/index.html#more_on_paths) for details.
+0. [Political News and Bots on Twitter](https://www.pewresearch.org/fact-tank/2018/06/21/the-news-that-bots-share-on-twitter-tends-not-to-focus-on-politics/)
 
-Using this approach with the `generate_results.jl` file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
+0. [Bots in the Twittersphere](https://www.pewresearch.org/internet/2018/04/09/bots-in-the-twittersphere/)
+
+### Academic Papers
+
+I remain active on various academic research projects. Many of them involve digital trace data, computational methods,
+and network analysis. You can see my full publication list at [Google Scholar](https://scholar.google.com/citations?user=tMy5ZTMAAAAJ&hl=en&oi=ao).
+
+0. [Survey and Human Computation for Improved Flu Tracking](https://www.nature.com/articles/s41467-020-20206-z)
+
+0. [Improving Election Prediction Internationally](https://www.davidlazer.com/sites/default/files/publications/KennedyWojcikLazer2017.pdf)
+
+0. [Men Idle, Women Network](https://onlinelibrary.wiley.com/doi/abs/10.1111/lsq.12169)
+
+0. [Voters of the Year](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/viewPDFInterstitial/15600/14849)
+
+0. [Why Legislative Networks](https://pdfs.semanticscholar.org/3801/a8f965706016e3f0e48e0a30298b11b3186d.pdf)
+
+0. [Do Birds of a Feather Vote Together, or is it Peer Influence?](https://journals.sagepub.com/doi/pdf/10.1177/1065912917722417)
+
+0. [Political Networks and Computational Social Science](http://books.google.com/books?hl=en&lr=&id=sWEwDwAAQBAJ&oi=fnd&pg=PA115&dq=info:AMGmium40P0J:scholar.google.com&ots=brp0KX5jDm&sig=5fCPDGyGijF4-RzNVTC95d9y10U)
+
+0. [Does democratization lower consumer prices? Regime type, prices, and the consumer–producer tradeoff](https://www.colorado.edu/faculty/baker/sites/default/files/attached-files/baker_and_wojcik_ipsr_website.pdf)
+
+0. [Gaming for science: A demo of online experiments on VolunteerScience.com](https://dl.acm.org/doi/abs/10.1145/2818052.2874332)
