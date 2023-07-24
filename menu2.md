@@ -13,6 +13,6 @@ tags = ["syntax", "code", "image"]
 
 ![a descriptive caption](/images/computer2.png)
 
-\\[ [Download my CV here](Wojcik_CV.pdf). \]
+\\[ [Download my CV here](/Wojcik_CV.pdf). \]
 ---
 
