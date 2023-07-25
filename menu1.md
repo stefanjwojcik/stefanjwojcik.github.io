@@ -6,7 +6,7 @@ rss = "Stefan Wojcik's Research page."
 
 tags = ["syntax", "code"]
 +++
-
+  
 # Research!
 
 ![a descriptive caption](/images/nebula.png)
